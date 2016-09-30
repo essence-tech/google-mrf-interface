@@ -15,6 +15,15 @@ var ErrDoesNotExist = errors.New("Does not exist")
 // MediaClient the gateway to Google media schema info.
 type MediaClient interface {
 	Close()
+	MRFInfo(string) (*googlemrf.MRF, error)
+	MRFs() ([]googlemrf.MRF, error)
+	Agencies() ([]googlemrf.Single, error)
+	LOBs() ([]googlemrf.Single, error)
+	Products() ([]googlemrf.Double, error)
+	SubProducts() ([]googlemrf.Double, error)
+	Channels() ([]googlemrf.Single, error)
+	Medias() ([]googlemrf.Double, error)
+	SubMedias() ([]googlemrf.Double, error)
 	ValidateMRF(...string) (bool, error)
 	ValidateAgency(...string) (bool, error)
 	ValidateChannel(...string) (bool, error)
@@ -23,11 +32,6 @@ type MediaClient interface {
 	ValidateProduct(...string) (bool, error)
 	ValidateSubMedia(...string) (bool, error)
 	ValidateSubProduct(...string) (bool, error)
-	MRFInfo(string) (*googlemrf.MRF, error)
-	MRFs() ([]googlemrf.MRF, error)
-	LOBs() ([]googlemrf.Single, error)
-	Products() ([]googlemrf.Double, error)
-	SubProducts() ([]googlemrf.Double, error)
 }
 
 type validationFunc func(context.Context, *googlemrf.Query, ...grpc.CallOption) (*googlemrf.Single, error)
@@ -133,6 +137,27 @@ func (m mediaClient) MRFs() ([]googlemrf.MRF, error) {
 	return mrfs, nil
 }
 
+// Agencies returns all Agencies.
+func (m mediaClient) Agencies() ([]googlemrf.Single, error) {
+	stream, err := m.client.Agencies(context.Background(), &googlemrf.Empty{})
+	if err != nil {
+		return nil, err
+	}
+
+	as := []googlemrf.Single{}
+	for {
+		a, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return nil, err
+		}
+		as = append(as, *a)
+	}
+	return as, nil
+}
+
 // LOBs returns all LOBs.
 func (m mediaClient) LOBs() ([]googlemrf.Single, error) {
 	stream, err := m.client.LOBs(context.Background(), &googlemrf.Empty{})
@@ -194,6 +219,69 @@ func (m mediaClient) SubProducts() ([]googlemrf.Double, error) {
 		sps = append(sps, *sp)
 	}
 	return sps, nil
+}
+
+// Channels returns all channels.
+func (m mediaClient) Channels() ([]googlemrf.Single, error) {
+	stream, err := m.client.Channels(context.Background(), &googlemrf.Empty{})
+	if err != nil {
+		return nil, err
+	}
+
+	chans := []googlemrf.Single{}
+	for {
+		cha, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return nil, err
+		}
+		chans = append(chans, *cha)
+	}
+	return chans, nil
+}
+
+// Medias returns all medias.
+func (m mediaClient) Medias() ([]googlemrf.Double, error) {
+	stream, err := m.client.Medias(context.Background(), &googlemrf.Empty{})
+	if err != nil {
+		return nil, err
+	}
+
+	meds := []googlemrf.Double{}
+	for {
+		m, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return nil, err
+		}
+		meds = append(meds, *m)
+	}
+	return meds, nil
+}
+
+// SubMedias returns all submedias.
+func (m mediaClient) SubMedias() ([]googlemrf.Double, error) {
+	stream, err := m.client.SubMedias(context.Background(), &googlemrf.Empty{})
+	if err != nil {
+		return nil, err
+	}
+
+	sms := []googlemrf.Double{}
+	for {
+		sm, err := stream.Recv()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return nil, err
+		}
+		sms = append(sms, *sm)
+	}
+	return sms, nil
 }
 
 func validate(f validationFunc, inputs ...string) (bool, error) {

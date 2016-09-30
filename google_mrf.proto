@@ -13,6 +13,9 @@ service GoogleMRF {
     // Obtains all MRF codes known.
     rpc MRFs(Empty) returns (stream MRF) {}
 
+    // Obtains all Agencies.
+    rpc Agencies(Empty) returns (stream Single) {}
+
     // Obtains all LOBs known.
     rpc LOBs(Empty) returns (stream Single) {}
 
@@ -64,12 +67,13 @@ message MRF {
     string Submitter = 1;
     string ID = 2;
     string Name = 3;
-    string SubProduct = 4;
-    string CostCenter = 5;
-    string PrimaryRegion = 6;
-    int32 Year = 7;
-    int32 Quarter = 8;
-    bool Approved = 9;
+    string Product = 4;
+    string SubProduct = 5;
+    string CostCenter = 6;
+    string PrimaryRegion = 7;
+    int32 Year = 8;
+    int32 Quarter = 9;
+    bool Approved = 10;
 }
 
 // Describes a model with no parent, {Agency, Channel, LOB}

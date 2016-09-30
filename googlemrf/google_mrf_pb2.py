@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='google_mrf.proto',
   package='googlemrf',
   syntax='proto3',
-  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\xa2\x01\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x12\n\nSubProduct\x18\x04 \x01(\t\x12\x12\n\nCostCenter\x18\x05 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x06 \x01(\t\x12\x0c\n\x04Year\x18\x07 \x01(\x05\x12\x0f\n\x07Quarter\x18\x08 \x01(\x05\x12\x10\n\x08\x41pproved\x18\t \x01(\x08\"\x16\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\"&\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t2\xea\x06\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x31\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12\x37\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x38\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x34\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x36\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x38\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x39\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12;\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\xb3\x01\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x0f\n\x07Product\x18\x04 \x01(\t\x12\x12\n\nSubProduct\x18\x05 \x01(\t\x12\x12\n\nCostCenter\x18\x06 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x07 \x01(\t\x12\x0c\n\x04Year\x18\x08 \x01(\x05\x12\x0f\n\x07Quarter\x18\t \x01(\x05\x12\x10\n\x08\x41pproved\x18\n \x01(\x08\"\x16\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\"&\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t2\x9f\x07\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12\x33\n\x08\x41gencies\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x31\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12\x37\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x38\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x34\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x36\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x38\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12\x39\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x12;\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x00\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -117,43 +117,50 @@ _MRF = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='SubProduct', full_name='googlemrf.MRF.SubProduct', index=3,
+      name='Product', full_name='googlemrf.MRF.Product', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CostCenter', full_name='googlemrf.MRF.CostCenter', index=4,
+      name='SubProduct', full_name='googlemrf.MRF.SubProduct', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PrimaryRegion', full_name='googlemrf.MRF.PrimaryRegion', index=5,
+      name='CostCenter', full_name='googlemrf.MRF.CostCenter', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Year', full_name='googlemrf.MRF.Year', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='PrimaryRegion', full_name='googlemrf.MRF.PrimaryRegion', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Quarter', full_name='googlemrf.MRF.Quarter', index=7,
+      name='Year', full_name='googlemrf.MRF.Year', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Approved', full_name='googlemrf.MRF.Approved', index=8,
-      number=9, type=8, cpp_type=7, label=1,
+      name='Quarter', full_name='googlemrf.MRF.Quarter', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Approved', full_name='googlemrf.MRF.Approved', index=9,
+      number=10, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -171,7 +178,7 @@ _MRF = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=80,
-  serialized_end=242,
+  serialized_end=259,
 )
 
 
@@ -201,8 +208,8 @@ _SINGLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=244,
-  serialized_end=266,
+  serialized_start=261,
+  serialized_end=283,
 )
 
 
@@ -239,8 +246,8 @@ _DOUBLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=268,
-  serialized_end=306,
+  serialized_start=285,
+  serialized_end=323,
 )
 
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
@@ -311,6 +318,11 @@ class GoogleMRFStub(object):
         '/googlemrf.GoogleMRF/MRFs',
         request_serializer=Empty.SerializeToString,
         response_deserializer=MRF.FromString,
+        )
+    self.Agencies = channel.unary_stream(
+        '/googlemrf.GoogleMRF/Agencies',
+        request_serializer=Empty.SerializeToString,
+        response_deserializer=Single.FromString,
         )
     self.LOBs = channel.unary_stream(
         '/googlemrf.GoogleMRF/LOBs',
@@ -399,6 +411,13 @@ class GoogleMRFServicer(object):
 
   def MRFs(self, request, context):
     """Obtains all MRF codes known.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Agencies(self, request, context):
+    """Obtains all Agencies.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -510,6 +529,11 @@ def add_GoogleMRFServicer_to_server(servicer, server):
           request_deserializer=Empty.FromString,
           response_serializer=MRF.SerializeToString,
       ),
+      'Agencies': grpc.unary_stream_rpc_method_handler(
+          servicer.Agencies,
+          request_deserializer=Empty.FromString,
+          response_serializer=Single.SerializeToString,
+      ),
       'LOBs': grpc.unary_stream_rpc_method_handler(
           servicer.LOBs,
           request_deserializer=Empty.FromString,
@@ -599,6 +623,10 @@ class BetaGoogleMRFServicer(object):
     """Obtains all MRF codes known.
     """
     context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+  def Agencies(self, request, context):
+    """Obtains all Agencies.
+    """
+    context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
   def LOBs(self, request, context):
     """Obtains all LOBs known.
     """
@@ -666,6 +694,10 @@ class BetaGoogleMRFStub(object):
     """Obtains all MRF codes known.
     """
     raise NotImplementedError()
+  def Agencies(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+    """Obtains all Agencies.
+    """
+    raise NotImplementedError()
   def LOBs(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
     """Obtains all LOBs known.
     """
@@ -729,6 +761,7 @@ class BetaGoogleMRFStub(object):
 
 def beta_create_GoogleMRF_server(servicer, pool=None, pool_size=None, default_timeout=None, maximum_timeout=None):
   request_deserializers = {
+    ('googlemrf.GoogleMRF', 'Agencies'): Empty.FromString,
     ('googlemrf.GoogleMRF', 'Channels'): Empty.FromString,
     ('googlemrf.GoogleMRF', 'LOBs'): Empty.FromString,
     ('googlemrf.GoogleMRF', 'MRFInfo'): Query.FromString,
@@ -747,6 +780,7 @@ def beta_create_GoogleMRF_server(servicer, pool=None, pool_size=None, default_ti
     ('googlemrf.GoogleMRF', 'ValidateSubProduct'): Query.FromString,
   }
   response_serializers = {
+    ('googlemrf.GoogleMRF', 'Agencies'): Single.SerializeToString,
     ('googlemrf.GoogleMRF', 'Channels'): Single.SerializeToString,
     ('googlemrf.GoogleMRF', 'LOBs'): Single.SerializeToString,
     ('googlemrf.GoogleMRF', 'MRFInfo'): MRF.SerializeToString,
@@ -765,6 +799,7 @@ def beta_create_GoogleMRF_server(servicer, pool=None, pool_size=None, default_ti
     ('googlemrf.GoogleMRF', 'ValidateSubProduct'): Single.SerializeToString,
   }
   method_implementations = {
+    ('googlemrf.GoogleMRF', 'Agencies'): face_utilities.unary_stream_inline(servicer.Agencies),
     ('googlemrf.GoogleMRF', 'Channels'): face_utilities.unary_stream_inline(servicer.Channels),
     ('googlemrf.GoogleMRF', 'LOBs'): face_utilities.unary_stream_inline(servicer.LOBs),
     ('googlemrf.GoogleMRF', 'MRFInfo'): face_utilities.unary_unary_inline(servicer.MRFInfo),
@@ -788,6 +823,7 @@ def beta_create_GoogleMRF_server(servicer, pool=None, pool_size=None, default_ti
 
 def beta_create_GoogleMRF_stub(channel, host=None, metadata_transformer=None, pool=None, pool_size=None):
   request_serializers = {
+    ('googlemrf.GoogleMRF', 'Agencies'): Empty.SerializeToString,
     ('googlemrf.GoogleMRF', 'Channels'): Empty.SerializeToString,
     ('googlemrf.GoogleMRF', 'LOBs'): Empty.SerializeToString,
     ('googlemrf.GoogleMRF', 'MRFInfo'): Query.SerializeToString,
@@ -806,6 +842,7 @@ def beta_create_GoogleMRF_stub(channel, host=None, metadata_transformer=None, po
     ('googlemrf.GoogleMRF', 'ValidateSubProduct'): Query.SerializeToString,
   }
   response_deserializers = {
+    ('googlemrf.GoogleMRF', 'Agencies'): Single.FromString,
     ('googlemrf.GoogleMRF', 'Channels'): Single.FromString,
     ('googlemrf.GoogleMRF', 'LOBs'): Single.FromString,
     ('googlemrf.GoogleMRF', 'MRFInfo'): MRF.FromString,
@@ -824,6 +861,7 @@ def beta_create_GoogleMRF_stub(channel, host=None, metadata_transformer=None, po
     ('googlemrf.GoogleMRF', 'ValidateSubProduct'): Single.FromString,
   }
   cardinalities = {
+    'Agencies': cardinality.Cardinality.UNARY_STREAM,
     'Channels': cardinality.Cardinality.UNARY_STREAM,
     'LOBs': cardinality.Cardinality.UNARY_STREAM,
     'MRFInfo': cardinality.Cardinality.UNARY_UNARY,

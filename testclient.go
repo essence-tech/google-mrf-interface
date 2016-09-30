@@ -36,6 +36,33 @@ type testClient struct {
 }
 
 func (t testClient) Close() {}
+func (t testClient) MRFInfo(string) (*googlemrf.MRF, error) {
+	return t.MRF, nil
+}
+func (t testClient) MRFs() ([]googlemrf.MRF, error) {
+	return t.ManyMRF, nil
+}
+func (t testClient) Agencies() ([]googlemrf.Single, error) {
+	return t.Singles, nil
+}
+func (t testClient) LOBs() ([]googlemrf.Single, error) {
+	return t.Singles, nil
+}
+func (t testClient) Products() ([]googlemrf.Double, error) {
+	return t.Doubles, nil
+}
+func (t testClient) SubProducts() ([]googlemrf.Double, error) {
+	return t.Doubles, nil
+}
+func (t testClient) Channels() ([]googlemrf.Single, error) {
+	return t.Singles, nil
+}
+func (t testClient) Medias() ([]googlemrf.Double, error) {
+	return t.Doubles, nil
+}
+func (t testClient) SubMedias() ([]googlemrf.Double, error) {
+	return t.Doubles, nil
+}
 func (t testClient) ValidateMRF(...string) (bool, error) {
 	return t.Success, nil
 }
@@ -59,19 +86,4 @@ func (t testClient) ValidateSubMedia(...string) (bool, error) {
 }
 func (t testClient) ValidateSubProduct(...string) (bool, error) {
 	return t.Success, nil
-}
-func (t testClient) MRFInfo(string) (*googlemrf.MRF, error) {
-	return t.MRF, nil
-}
-func (t testClient) MRFs() ([]googlemrf.MRF, error) {
-	return t.ManyMRF, nil
-}
-func (t testClient) LOBs() ([]googlemrf.Single, error) {
-	return t.Singles, nil
-}
-func (t testClient) Products() ([]googlemrf.Double, error) {
-	return t.Doubles, nil
-}
-func (t testClient) SubProducts() ([]googlemrf.Double, error) {
-	return t.Doubles, nil
 }
