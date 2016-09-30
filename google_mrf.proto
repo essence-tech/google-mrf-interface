@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package googlemrf;
+
+// Interface exported by the server.
+service GoogleMRF {
+
+    // Obtains a single MRF code and its related info.
+    //
+    // If it is not found an empty MRF is returned.
+    rpc MRFInfo(Query) returns (MRF) {}
+
+    // Obtains all MRF codes known.
+    rpc MRFs(Empty) returns (stream MRF) {}
+
+    // Obtains all LOBs known.
+    rpc LOBs(Empty) returns (stream Single) {}
+
+    // Obtains all Products known.
+    rpc Products(Empty) returns (stream Double) {}
+
+    // Obtains all SubProducts known.
+    rpc SubProducts(Empty) returns (stream Double) {}
+
+    // Obtains all Channels known.
+    rpc Channels(Empty) returns (stream Single) {}
+
+    // Obtains all Medias known.
+    rpc Medias(Empty) returns (stream Double) {}
+
+    // Obtains all SubMedias known.
+    rpc SubMedias(Empty) returns (stream Double) {}
+
+    // The following methods check to see if the
+    // described object exists.
+    //
+    // In the case of something like a product, the query
+    // can be provided with both the name of the product
+    // and the parent line of business. If the combination
+    // of product and LOB does not exist empty will be
+    // returned.
+    //
+    // Returns an empty instance if it is not found.
+    rpc ValidateMRF(Query) returns (MRF) {}
+    rpc ValidateAgency(Query) returns (Single) {}
+    rpc ValidateChannel(Query) returns (Single) {}
+    rpc ValidateLOB(Query) returns (Single) {}
+    rpc ValidateMedia(Query) returns (Single) {}
+    rpc ValidateProduct(Query) returns (Single) {}
+    rpc ValidateSubMedia(Query) returns (Single) {}
+    rpc ValidateSubProduct(Query) returns (Single) {}
+}
+
+message Empty {}
+
+// Describes the query options available.
+message Query {
+    string name = 1;
+    string parent = 2;
+}
+
+// Describes an MRF code.
+message MRF {
+    string Submitter = 1;
+    string ID = 2;
+    string Name = 3;
+    string SubProduct = 4;
+    string CostCenter = 5;
+    string PrimaryRegion = 6;
+    int32 Year = 7;
+    int32 Quarter = 8;
+    bool Approved = 9;
+}
+
+// Describes a model with no parent, {Agency, Channel, LOB}
+message Single {
+    string Name = 1;
+}
+
+// Describes a model with a parent, {Media, Product, SubMedia, SubProduct}
+message Double {
+    string Name = 1;
+    string Parent = 2;
+}
