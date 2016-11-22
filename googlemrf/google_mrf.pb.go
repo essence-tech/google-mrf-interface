@@ -56,6 +56,20 @@ func (m *Query) String() string            { return proto.CompactTextString(m) }
 func (*Query) ProtoMessage()               {}
 func (*Query) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{1} }
 
+func (m *Query) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
+
+func (m *Query) GetParent() string {
+	if m != nil {
+		return m.Parent
+	}
+	return ""
+}
+
 // Describes an MRF code.
 type MRF struct {
 	Submitter     string `protobuf:"bytes,1,opt,name=Submitter,json=submitter" json:"Submitter,omitempty"`
@@ -75,6 +89,76 @@ func (m *MRF) String() string            { return proto.CompactTextString(m) }
 func (*MRF) ProtoMessage()               {}
 func (*MRF) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{2} }
 
+func (m *MRF) GetSubmitter() string {
+	if m != nil {
+		return m.Submitter
+	}
+	return ""
+}
+
+func (m *MRF) GetID() string {
+	if m != nil {
+		return m.ID
+	}
+	return ""
+}
+
+func (m *MRF) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
+
+func (m *MRF) GetProduct() string {
+	if m != nil {
+		return m.Product
+	}
+	return ""
+}
+
+func (m *MRF) GetSubProduct() string {
+	if m != nil {
+		return m.SubProduct
+	}
+	return ""
+}
+
+func (m *MRF) GetCostCenter() string {
+	if m != nil {
+		return m.CostCenter
+	}
+	return ""
+}
+
+func (m *MRF) GetPrimaryRegion() string {
+	if m != nil {
+		return m.PrimaryRegion
+	}
+	return ""
+}
+
+func (m *MRF) GetYear() int32 {
+	if m != nil {
+		return m.Year
+	}
+	return 0
+}
+
+func (m *MRF) GetQuarter() int32 {
+	if m != nil {
+		return m.Quarter
+	}
+	return 0
+}
+
+func (m *MRF) GetApproved() bool {
+	if m != nil {
+		return m.Approved
+	}
+	return false
+}
+
 // Describes a model with no parent, {Agency, Channel, LOB}
 type Single struct {
 	Name string `protobuf:"bytes,1,opt,name=Name,json=name" json:"Name,omitempty"`
@@ -84,6 +168,13 @@ func (m *Single) Reset()                    { *m = Single{} }
 func (m *Single) String() string            { return proto.CompactTextString(m) }
 func (*Single) ProtoMessage()               {}
 func (*Single) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3} }
+
+func (m *Single) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
 
 // Describes a model with a parent, {Media, Product, SubMedia, SubProduct}
 type Double struct {
@@ -95,6 +186,20 @@ func (m *Double) Reset()                    { *m = Double{} }
 func (m *Double) String() string            { return proto.CompactTextString(m) }
 func (*Double) ProtoMessage()               {}
 func (*Double) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{4} }
+
+func (m *Double) GetName() string {
+	if m != nil {
+		return m.Name
+	}
+	return ""
+}
+
+func (m *Double) GetParent() string {
+	if m != nil {
+		return m.Parent
+	}
+	return ""
+}
 
 func init() {
 	proto.RegisterType((*Empty)(nil), "googlemrf.Empty")
@@ -110,7 +215,7 @@ var _ grpc.ClientConn
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion3
+const _ = grpc.SupportPackageIsVersion4
 
 // Client API for GoogleMRF service
 
@@ -960,7 +1065,7 @@ var _GoogleMRF_serviceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: fileDescriptor0,
+	Metadata: "google_mrf.proto",
 }
 
 func init() { proto.RegisterFile("google_mrf.proto", fileDescriptor0) }
