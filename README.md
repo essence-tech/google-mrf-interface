@@ -10,7 +10,7 @@ Python and Go client are provided for communication with the service.
 ### Python
 Install from pip with
 ```
-pip install git+git://github.com/essence-tech/google-mrf-interace.git@master
+pip install git+git://github.com/essence-tech/google-mrf-interface.git@master
 ```
 
 ```python
