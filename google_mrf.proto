@@ -68,12 +68,13 @@ message MRF {
     string ID = 2;
     string Name = 3;
     string Product = 4;
-    string SubProduct = 5;
-    string CostCenter = 6;
-    string PrimaryRegion = 7;
-    int32 Year = 8;
-    int32 Quarter = 9;
-    bool Approved = 10;
+    string ProductCode = 5;
+    string SubProduct = 6;
+    string CostCenter = 7;
+    string PrimaryRegion = 8;
+    int32 Year = 9;
+    int32 Quarter = 10;
+    bool Approved = 11;
 }
 
 // Describes a model with no parent, {Agency, Channel, LOB}
