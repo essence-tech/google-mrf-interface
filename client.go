@@ -1,12 +1,14 @@
 package googlemrf
 
 import (
+	"crypto/tls"
 	"errors"
 	"io"
 
 	"github.com/essence-tech/google-mrf-interface/googlemrf"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials"
 )
 
 // ErrDoesNotExist returned if an entity does not exist.
@@ -43,8 +45,16 @@ type mediaClient struct {
 }
 
 // New returns a new MediaClient with default options.
-func New(host string) MediaClient {
-	conn, err := grpc.Dial(host, grpc.WithInsecure())
+func New(host string, tlsConfig *tls.Config) MediaClient {
+	var dialOption grpc.DialOption
+	if tlsConfig != nil {
+		transportCreds := credentials.NewTLS(tlsConfig)
+		dialOption = grpc.WithTransportCredentials(transportCreds)
+	} else {
+		dialOption = grpc.WithInsecure()
+	}
+
+	conn, err := grpc.Dial(host, dialOption)
 	if err != nil {
 		panic(err)
 	}

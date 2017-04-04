@@ -35,13 +35,36 @@ for mrf in mrfs:
 package main
 
 import (
-    "github.com/essence-tech/google-mrf-inteface"
+	"crypto/tls"
+	"crypto/x509"
+	"fmt"
+	"io/ioutil"
+
+	client "github.com/essence-tech/google-mrf-interface"
 )
 
-c = client.New("ess-lon-cmo-003:4041")
-p, err := c.ValidateProduct("TV")
-if err != nil {
-    panic(err)
+func main() {
+	certificate, _ := tls.LoadX509KeyPair(
+		"google-mrf.crt",
+		"google-mrf.key",
+	)
+	certPool := x509.NewCertPool()
+	bs, _ := ioutil.ReadFile("essence-systems.crt")
+	certPool.AppendCertsFromPEM(bs)
+	tc := &tls.Config{
+		ServerName:   "google-mrf",
+		Certificates: []tls.Certificate{certificate},
+		RootCAs:      certPool,
+	}
+
+	c := client.New("127.0.0.1:4041", tc)
+	list, err := c.MRFs()
+	if err != nil {
+		panic(err)
+	}
+
+	for _, m := range list {
+		fmt.Println(m.PrimaryRegion)
+	}
 }
-...
 ```
