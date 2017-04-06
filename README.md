@@ -17,7 +17,7 @@ pip install git+git://github.com/essence-tech/google-mrf-interface.git@master
 import googlemrf
 
 
-client = googlemrf.get_client('ess-lon-cmo-003:4041')
+client = googlemrf.get_client('ess-lon-cmo-003:4041', 'google-mrf.pem')
 
 # Single item.
 p = client.ValidateProduct(googlemrf.Query(name='TV'))
