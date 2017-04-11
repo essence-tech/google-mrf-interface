@@ -80,10 +80,12 @@ message MRF {
 // Describes a model with no parent, {Agency, Channel, LOB}
 message Single {
     string Name = 1;
+    string ID = 2;
 }
 
 // Describes a model with a parent, {Media, Product, SubMedia, SubProduct}
 message Double {
     string Name = 1;
     string Parent = 2;
+    string ID = 3;
 }
