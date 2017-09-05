@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package googlemrf;
 
+import "google/api/annotations.proto";
+
 // Interface exported by the server.
 service GoogleMRF {
 
@@ -44,14 +46,54 @@ service GoogleMRF {
     // returned.
     //
     // Returns an empty instance if it is not found.
-    rpc ValidateMRF(Query) returns (MRF) {}
-    rpc ValidateAgency(Query) returns (Single) {}
-    rpc ValidateChannel(Query) returns (Single) {}
-    rpc ValidateLOB(Query) returns (Single) {}
-    rpc ValidateMedia(Query) returns (Single) {}
-    rpc ValidateProduct(Query) returns (Single) {}
-    rpc ValidateSubMedia(Query) returns (Single) {}
-    rpc ValidateSubProduct(Query) returns (Single) {}
+    rpc ValidateMRF(Query) returns (MRF) {
+        option (google.api.http) = {
+            post: "/api/v1/mrfs/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateAgency(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/agencies/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateChannel(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/channels/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateLOB(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/lobs/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateMedia(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/medias/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateProduct(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/products/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateSubMedia(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/submedias/{name}"
+            body: "*"
+        };
+    }
+    rpc ValidateSubProduct(Query) returns (Single) {
+        option (google.api.http) = {
+            post: "/api/v1/subproducts/{name}"
+            body: "*"
+        };
+    }
 }
 
 message Empty {}
@@ -75,6 +117,7 @@ message MRF {
     int32 Year = 9;
     int32 Quarter = 10;
     bool Approved = 11;
+    bool LongTail = 12;
 }
 
 // Describes a model with no parent, {Agency, Channel, LOB}
