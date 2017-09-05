@@ -48,50 +48,42 @@ service GoogleMRF {
     // Returns an empty instance if it is not found.
     rpc ValidateMRF(Query) returns (MRF) {
         option (google.api.http) = {
-            post: "/api/v1/mrfs/{name}"
-            body: "*"
+            get: "/api/v1/mrfs/{name}"
         };
     }
     rpc ValidateAgency(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/agencies/{name}"
-            body: "*"
+            get: "/api/v1/agencies/{name}"
         };
     }
     rpc ValidateChannel(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/channels/{name}"
-            body: "*"
+            get: "/api/v1/channels/{name}"
         };
     }
     rpc ValidateLOB(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/lobs/{name}"
-            body: "*"
+            get: "/api/v1/lobs/{name}"
         };
     }
     rpc ValidateMedia(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/medias/{name}"
-            body: "*"
+            get: "/api/v1/medias/{name}"
         };
     }
     rpc ValidateProduct(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/products/{name}"
-            body: "*"
+            get: "/api/v1/products/{name}"
         };
     }
     rpc ValidateSubMedia(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/submedias/{name}"
-            body: "*"
+            get: "/api/v1/submedias/{name}"
         };
     }
     rpc ValidateSubProduct(Query) returns (Single) {
         option (google.api.http) = {
-            post: "/api/v1/subproducts/{name}"
-            body: "*"
+            get: "/api/v1/subproducts/{name}"
         };
     }
 }

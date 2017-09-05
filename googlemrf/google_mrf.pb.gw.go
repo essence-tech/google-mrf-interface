@@ -27,13 +27,13 @@ var _ io.Reader
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
+var (
+	filter_GoogleMRF_ValidateMRF_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateMRF_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -51,6 +51,10 @@ func request_GoogleMRF_ValidateMRF_0(ctx context.Context, marshaler runtime.Mars
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateMRF_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateMRF(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -58,13 +62,13 @@ func request_GoogleMRF_ValidateMRF_0(ctx context.Context, marshaler runtime.Mars
 
 }
 
+var (
+	filter_GoogleMRF_ValidateAgency_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateAgency_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -82,6 +86,10 @@ func request_GoogleMRF_ValidateAgency_0(ctx context.Context, marshaler runtime.M
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateAgency_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateAgency(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -89,13 +97,13 @@ func request_GoogleMRF_ValidateAgency_0(ctx context.Context, marshaler runtime.M
 
 }
 
+var (
+	filter_GoogleMRF_ValidateChannel_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateChannel_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -113,6 +121,10 @@ func request_GoogleMRF_ValidateChannel_0(ctx context.Context, marshaler runtime.
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateChannel_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateChannel(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -120,13 +132,13 @@ func request_GoogleMRF_ValidateChannel_0(ctx context.Context, marshaler runtime.
 
 }
 
+var (
+	filter_GoogleMRF_ValidateLOB_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateLOB_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -144,6 +156,10 @@ func request_GoogleMRF_ValidateLOB_0(ctx context.Context, marshaler runtime.Mars
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateLOB_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateLOB(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -151,13 +167,13 @@ func request_GoogleMRF_ValidateLOB_0(ctx context.Context, marshaler runtime.Mars
 
 }
 
+var (
+	filter_GoogleMRF_ValidateMedia_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateMedia_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -175,6 +191,10 @@ func request_GoogleMRF_ValidateMedia_0(ctx context.Context, marshaler runtime.Ma
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateMedia_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateMedia(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -182,13 +202,13 @@ func request_GoogleMRF_ValidateMedia_0(ctx context.Context, marshaler runtime.Ma
 
 }
 
+var (
+	filter_GoogleMRF_ValidateProduct_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateProduct_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -206,6 +226,10 @@ func request_GoogleMRF_ValidateProduct_0(ctx context.Context, marshaler runtime.
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateProduct_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateProduct(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -213,13 +237,13 @@ func request_GoogleMRF_ValidateProduct_0(ctx context.Context, marshaler runtime.
 
 }
 
+var (
+	filter_GoogleMRF_ValidateSubMedia_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateSubMedia_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -237,6 +261,10 @@ func request_GoogleMRF_ValidateSubMedia_0(ctx context.Context, marshaler runtime
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateSubMedia_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateSubMedia(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -244,13 +272,13 @@ func request_GoogleMRF_ValidateSubMedia_0(ctx context.Context, marshaler runtime
 
 }
 
+var (
+	filter_GoogleMRF_ValidateSubProduct_0 = &utilities.DoubleArray{Encoding: map[string]int{"name": 0}, Base: []int{1, 1, 0}, Check: []int{0, 1, 2}}
+)
+
 func request_GoogleMRF_ValidateSubProduct_0(ctx context.Context, marshaler runtime.Marshaler, client GoogleMRFClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq Query
 	var metadata runtime.ServerMetadata
-
-	if err := marshaler.NewDecoder(req.Body).Decode(&protoReq); err != nil {
-		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
-	}
 
 	var (
 		val string
@@ -268,6 +296,10 @@ func request_GoogleMRF_ValidateSubProduct_0(ctx context.Context, marshaler runti
 
 	if err != nil {
 		return nil, metadata, err
+	}
+
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GoogleMRF_ValidateSubProduct_0); err != nil {
+		return nil, metadata, grpc.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
 	msg, err := client.ValidateSubProduct(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -305,7 +337,7 @@ func RegisterGoogleMRFHandlerFromEndpoint(ctx context.Context, mux *runtime.Serv
 func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
 	client := NewGoogleMRFClient(conn)
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateMRF_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateMRF_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -333,7 +365,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateAgency_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateAgency_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -361,7 +393,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateChannel_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateChannel_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -389,7 +421,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateLOB_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateLOB_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -417,7 +449,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateMedia_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateMedia_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -445,7 +477,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateProduct_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateProduct_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -473,7 +505,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateSubMedia_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateSubMedia_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
@@ -501,7 +533,7 @@ func RegisterGoogleMRFHandler(ctx context.Context, mux *runtime.ServeMux, conn *
 
 	})
 
-	mux.Handle("POST", pattern_GoogleMRF_ValidateSubProduct_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GoogleMRF_ValidateSubProduct_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 		if cn, ok := w.(http.CloseNotifier); ok {
