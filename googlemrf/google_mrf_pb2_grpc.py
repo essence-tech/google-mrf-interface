@@ -101,6 +101,11 @@ class GoogleMRFStub(object):
         request_serializer=google__mrf__pb2.Query.SerializeToString,
         response_deserializer=google__mrf__pb2.Single.FromString,
         )
+    self.LongTailMRFs = channel.unary_unary(
+        '/googlemrf.GoogleMRF/LongTailMRFs',
+        request_serializer=google__mrf__pb2.Empty.SerializeToString,
+        response_deserializer=google__mrf__pb2.MRFList.FromString,
+        )
 
 
 class GoogleMRFServicer(object):
@@ -223,6 +228,13 @@ class GoogleMRFServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def LongTailMRFs(self, request, context):
+    """All 'long tail' mrfs.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_GoogleMRFServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -310,6 +322,11 @@ def add_GoogleMRFServicer_to_server(servicer, server):
           servicer.ValidateSubProduct,
           request_deserializer=google__mrf__pb2.Query.FromString,
           response_serializer=google__mrf__pb2.Single.SerializeToString,
+      ),
+      'LongTailMRFs': grpc.unary_unary_rpc_method_handler(
+          servicer.LongTailMRFs,
+          request_deserializer=google__mrf__pb2.Empty.FromString,
+          response_serializer=google__mrf__pb2.MRFList.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
