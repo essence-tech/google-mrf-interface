@@ -618,7 +618,7 @@ var (
 
 	pattern_GoogleMRF_ValidateSubProduct_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"api", "v1", "subproducts", "name"}, ""))
 
-	pattern_GoogleMRF_LongTailMRFs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "v1", "mrfs", "longtail"}, ""))
+	pattern_GoogleMRF_LongTailMRFs_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "v1", "longtails"}, ""))
 )
 
 var (

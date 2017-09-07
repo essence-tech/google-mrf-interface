@@ -90,7 +90,7 @@ service GoogleMRF {
     // All 'long tail' mrfs.
     rpc LongTailMRFs(Empty) returns (MRFList) {
         option (google.api.http) = {
-            get: "/api/v1/mrfs/longtail"
+            get: "/api/v1/longtails"
         };
     }
 }
