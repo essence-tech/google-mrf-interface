@@ -117,6 +117,7 @@ message MRF {
     int32 Quarter = 10;
     bool Approved = 11;
     bool LongTail = 12;
+    string MediaCode = 13;
 }
 
 // A list of MRFs.
