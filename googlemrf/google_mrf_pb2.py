@@ -14,15 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='google_mrf.proto',
   package='googlemrf',
   syntax='proto3',
-  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\x1a\x1cgoogle/api/annotations.proto\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\xed\x01\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x0f\n\x07Product\x18\x04 \x01(\t\x12\x13\n\x0bProductCode\x18\x05 \x01(\t\x12\x12\n\nSubProduct\x18\x06 \x01(\t\x12\x12\n\nCostCenter\x18\x07 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x08 \x01(\t\x12\x0c\n\x04Year\x18\t \x01(\x05\x12\x0f\n\x07Quarter\x18\n \x01(\x05\x12\x10\n\x08\x41pproved\x18\x0b \x01(\x08\x12\x10\n\x08LongTail\x18\x0c \x01(\x08\x12\x11\n\tMediaCode\x18\r \x01(\t\"\'\n\x07MRFList\x12\x1c\n\x04Mrfs\x18\x01 \x03(\x0b\x32\x0e.googlemrf.MRF\"\"\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\"2\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t\x12\n\n\x02ID\x18\x03 \x01(\t2\xe2\t\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12\x33\n\x08\x41gencies\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12L\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/mrfs/{name}\x12V\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/agencies/{name}\x12W\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/channels/{name}\x12O\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/lobs/{name}\x12S\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/v1/medias/{name}\x12W\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/products/{name}\x12Y\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/api/v1/submedias/{name}\x12]\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/v1/subproducts/{name}\x12O\n\x0cLongTailMRFs\x12\x10.googlemrf.Empty\x1a\x12.googlemrf.MRFList\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/v1/longtailsb\x06proto3')
+  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\x89\x03\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x0f\n\x07Product\x18\x04 \x01(\t\x12\x13\n\x0bProductCode\x18\x05 \x01(\t\x12\x12\n\nSubProduct\x18\x06 \x01(\t\x12\x12\n\nCostCenter\x18\x07 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x08 \x01(\t\x12\x0c\n\x04Year\x18\t \x01(\x05\x12\x0f\n\x07Quarter\x18\n \x01(\x05\x12\x10\n\x08\x41pproved\x18\x0b \x01(\x08\x12\x10\n\x08LongTail\x18\x0c \x01(\x08\x12\x11\n\tMediaCode\x18\r \x01(\t\x12\x32\n\x0eSubmissionDate\x18\x0e \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\tCloseDate\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x37\n\x13InitialApprovalDate\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\'\n\x07MRFList\x12\x1c\n\x04Mrfs\x18\x01 \x03(\x0b\x32\x0e.googlemrf.MRF\"\"\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\"2\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t\x12\n\n\x02ID\x18\x03 \x01(\t2\xe2\t\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12\x33\n\x08\x41gencies\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12L\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/mrfs/{name}\x12V\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/agencies/{name}\x12W\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/channels/{name}\x12O\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/lobs/{name}\x12S\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/v1/medias/{name}\x12W\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/products/{name}\x12Y\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/api/v1/submedias/{name}\x12]\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/v1/subproducts/{name}\x12O\n\x0cLongTailMRFs\x12\x10.googlemrf.Empty\x1a\x12.googlemrf.MRFList\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/v1/longtailsb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -47,8 +48,8 @@ _EMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61,
-  serialized_end=68,
+  serialized_start=94,
+  serialized_end=101,
 )
 
 
@@ -85,8 +86,8 @@ _QUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=70,
-  serialized_end=107,
+  serialized_start=103,
+  serialized_end=140,
 )
 
 
@@ -188,6 +189,27 @@ _MRF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='SubmissionDate', full_name='googlemrf.MRF.SubmissionDate', index=13,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='CloseDate', full_name='googlemrf.MRF.CloseDate', index=14,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='InitialApprovalDate', full_name='googlemrf.MRF.InitialApprovalDate', index=15,
+      number=16, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -200,8 +222,8 @@ _MRF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=347,
+  serialized_start=143,
+  serialized_end=536,
 )
 
 
@@ -231,8 +253,8 @@ _MRFLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=349,
-  serialized_end=388,
+  serialized_start=538,
+  serialized_end=577,
 )
 
 
@@ -269,8 +291,8 @@ _SINGLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=390,
-  serialized_end=424,
+  serialized_start=579,
+  serialized_end=613,
 )
 
 
@@ -314,10 +336,13 @@ _DOUBLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=426,
-  serialized_end=476,
+  serialized_start=615,
+  serialized_end=665,
 )
 
+_MRF.fields_by_name['SubmissionDate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_MRF.fields_by_name['CloseDate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_MRF.fields_by_name['InitialApprovalDate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _MRFLIST.fields_by_name['Mrfs'].message_type = _MRF
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['Query'] = _QUERY

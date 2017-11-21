@@ -3,6 +3,7 @@ syntax = "proto3";
 package googlemrf;
 
 import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
 
 // Interface exported by the server.
 service GoogleMRF {
@@ -118,6 +119,9 @@ message MRF {
     bool Approved = 11;
     bool LongTail = 12;
     string MediaCode = 13;
+    google.protobuf.Timestamp SubmissionDate = 14;
+    google.protobuf.Timestamp CloseDate = 15;
+    google.protobuf.Timestamp InitialApprovalDate = 16;
 }
 
 // A list of MRFs.
