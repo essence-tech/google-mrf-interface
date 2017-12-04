@@ -123,6 +123,7 @@ message MRF {
     google.protobuf.Timestamp CloseDate = 15;
     google.protobuf.Timestamp InitialApprovalDate = 16;
     string HelpText = 17;
+    string IndicatedStatus = 18;
 }
 
 // A list of MRFs.
