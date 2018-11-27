@@ -21,10 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='google_mrf.proto',
   package='googlemrf',
   syntax='proto3',
-  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\xb4\x03\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x0f\n\x07Product\x18\x04 \x01(\t\x12\x13\n\x0bProductCode\x18\x05 \x01(\t\x12\x12\n\nSubProduct\x18\x06 \x01(\t\x12\x12\n\nCostCenter\x18\x07 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x08 \x01(\t\x12\x0c\n\x04Year\x18\t \x01(\x05\x12\x0f\n\x07Quarter\x18\n \x01(\x05\x12\x10\n\x08\x41pproved\x18\x0b \x01(\x08\x12\x10\n\x08LongTail\x18\x0c \x01(\x08\x12\x11\n\tMediaCode\x18\r \x01(\t\x12\x32\n\x0eSubmissionDate\x18\x0e \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\tCloseDate\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x37\n\x13InitialApprovalDate\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08HelpText\x18\x11 \x01(\t\x12\x17\n\x0fIndicatedStatus\x18\x12 \x01(\t\"\'\n\x07MRFList\x12\x1c\n\x04Mrfs\x18\x01 \x03(\x0b\x32\x0e.googlemrf.MRF\"\"\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\"2\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t\x12\n\n\x02ID\x18\x03 \x01(\t2\xe2\t\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12\x33\n\x08\x41gencies\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12L\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/mrfs/{name}\x12V\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/agencies/{name}\x12W\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/channels/{name}\x12O\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/lobs/{name}\x12S\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/v1/medias/{name}\x12W\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/products/{name}\x12Y\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/api/v1/submedias/{name}\x12]\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/v1/subproducts/{name}\x12O\n\x0cLongTailMRFs\x12\x10.googlemrf.Empty\x1a\x12.googlemrf.MRFList\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/v1/longtailsb\x06proto3')
+  serialized_pb=_b('\n\x10google_mrf.proto\x12\tgooglemrf\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x07\n\x05\x45mpty\"%\n\x05Query\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\"\xc1\x03\n\x03MRF\x12\x11\n\tSubmitter\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\x12\x0c\n\x04Name\x18\x03 \x01(\t\x12\x0f\n\x07Product\x18\x04 \x01(\t\x12\x13\n\x0bProductCode\x18\x05 \x01(\t\x12\x12\n\nSubProduct\x18\x06 \x01(\t\x12\x12\n\nCostCenter\x18\x07 \x01(\t\x12\x15\n\rPrimaryRegion\x18\x08 \x01(\t\x12\x0c\n\x04Year\x18\t \x01(\x05\x12\x0f\n\x07Quarter\x18\n \x01(\x05\x12\x10\n\x08\x41pproved\x18\x0b \x01(\x08\x12\x10\n\x08LongTail\x18\x0c \x01(\x08\x12\x11\n\tMediaCode\x18\r \x01(\t\x12\x32\n\x0eSubmissionDate\x18\x0e \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\tCloseDate\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x37\n\x13InitialApprovalDate\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08HelpText\x18\x11 \x01(\t\x12\x17\n\x0fIndicatedStatus\x18\x12 \x01(\t\x12\x0b\n\x03MMG\x18\x13 \x01(\t\"\'\n\x07MRFList\x12\x1c\n\x04Mrfs\x18\x01 \x03(\x0b\x32\x0e.googlemrf.MRF\"\"\n\x06Single\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\t\"2\n\x06\x44ouble\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\x0e\n\x06Parent\x18\x02 \x01(\t\x12\n\n\x02ID\x18\x03 \x01(\t2\xe2\t\n\tGoogleMRF\x12-\n\x07MRFInfo\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x00\x12,\n\x04MRFs\x12\x10.googlemrf.Empty\x1a\x0e.googlemrf.MRF\"\x00\x30\x01\x12\x33\n\x08\x41gencies\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12/\n\x04LOBs\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x33\n\x08Products\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x36\n\x0bSubProducts\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x33\n\x08\x43hannels\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Single\"\x00\x30\x01\x12\x31\n\x06Medias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12\x34\n\tSubMedias\x12\x10.googlemrf.Empty\x1a\x11.googlemrf.Double\"\x00\x30\x01\x12L\n\x0bValidateMRF\x12\x10.googlemrf.Query\x1a\x0e.googlemrf.MRF\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/mrfs/{name}\x12V\n\x0eValidateAgency\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/agencies/{name}\x12W\n\x0fValidateChannel\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/channels/{name}\x12O\n\x0bValidateLOB\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/api/v1/lobs/{name}\x12S\n\rValidateMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/v1/medias/{name}\x12W\n\x0fValidateProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/v1/products/{name}\x12Y\n\x10ValidateSubMedia\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\" \x82\xd3\xe4\x93\x02\x1a\x12\x18/api/v1/submedias/{name}\x12]\n\x12ValidateSubProduct\x12\x10.googlemrf.Query\x1a\x11.googlemrf.Single\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/v1/subproducts/{name}\x12O\n\x0cLongTailMRFs\x12\x10.googlemrf.Empty\x1a\x12.googlemrf.MRFList\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/api/v1/longtailsb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -224,6 +223,13 @@ _MRF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='MMG', full_name='googlemrf.MRF.MMG', index=18,
+      number=19, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -237,7 +243,7 @@ _MRF = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=143,
-  serialized_end=579,
+  serialized_end=592,
 )
 
 
@@ -267,8 +273,8 @@ _MRFLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=581,
-  serialized_end=620,
+  serialized_start=594,
+  serialized_end=633,
 )
 
 
@@ -305,8 +311,8 @@ _SINGLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=622,
-  serialized_end=656,
+  serialized_start=635,
+  serialized_end=669,
 )
 
 
@@ -350,8 +356,8 @@ _DOUBLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=658,
-  serialized_end=708,
+  serialized_start=671,
+  serialized_end=721,
 )
 
 _MRF.fields_by_name['SubmissionDate'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -364,6 +370,7 @@ DESCRIPTOR.message_types_by_name['MRF'] = _MRF
 DESCRIPTOR.message_types_by_name['MRFList'] = _MRFLIST
 DESCRIPTOR.message_types_by_name['Single'] = _SINGLE
 DESCRIPTOR.message_types_by_name['Double'] = _DOUBLE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
   DESCRIPTOR = _EMPTY,
@@ -408,14 +415,191 @@ Double = _reflection.GeneratedProtocolMessageType('Double', (_message.Message,),
 _sym_db.RegisterMessage(Double)
 
 
+
+_GOOGLEMRF = _descriptor.ServiceDescriptor(
+  name='GoogleMRF',
+  full_name='googlemrf.GoogleMRF',
+  file=DESCRIPTOR,
+  index=0,
+  options=None,
+  serialized_start=724,
+  serialized_end=1974,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='MRFInfo',
+    full_name='googlemrf.GoogleMRF.MRFInfo',
+    index=0,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_MRF,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='MRFs',
+    full_name='googlemrf.GoogleMRF.MRFs',
+    index=1,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_MRF,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Agencies',
+    full_name='googlemrf.GoogleMRF.Agencies',
+    index=2,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_SINGLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='LOBs',
+    full_name='googlemrf.GoogleMRF.LOBs',
+    index=3,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_SINGLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Products',
+    full_name='googlemrf.GoogleMRF.Products',
+    index=4,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_DOUBLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SubProducts',
+    full_name='googlemrf.GoogleMRF.SubProducts',
+    index=5,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_DOUBLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Channels',
+    full_name='googlemrf.GoogleMRF.Channels',
+    index=6,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_SINGLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Medias',
+    full_name='googlemrf.GoogleMRF.Medias',
+    index=7,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_DOUBLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SubMedias',
+    full_name='googlemrf.GoogleMRF.SubMedias',
+    index=8,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_DOUBLE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateMRF',
+    full_name='googlemrf.GoogleMRF.ValidateMRF',
+    index=9,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_MRF,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\025\022\023/api/v1/mrfs/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateAgency',
+    full_name='googlemrf.GoogleMRF.ValidateAgency',
+    index=10,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\031\022\027/api/v1/agencies/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateChannel',
+    full_name='googlemrf.GoogleMRF.ValidateChannel',
+    index=11,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\031\022\027/api/v1/channels/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateLOB',
+    full_name='googlemrf.GoogleMRF.ValidateLOB',
+    index=12,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\025\022\023/api/v1/lobs/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateMedia',
+    full_name='googlemrf.GoogleMRF.ValidateMedia',
+    index=13,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\027\022\025/api/v1/medias/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateProduct',
+    full_name='googlemrf.GoogleMRF.ValidateProduct',
+    index=14,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\031\022\027/api/v1/products/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateSubMedia',
+    full_name='googlemrf.GoogleMRF.ValidateSubMedia',
+    index=15,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\032\022\030/api/v1/submedias/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='ValidateSubProduct',
+    full_name='googlemrf.GoogleMRF.ValidateSubProduct',
+    index=16,
+    containing_service=None,
+    input_type=_QUERY,
+    output_type=_SINGLE,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\034\022\032/api/v1/subproducts/{name}')),
+  ),
+  _descriptor.MethodDescriptor(
+    name='LongTailMRFs',
+    full_name='googlemrf.GoogleMRF.LongTailMRFs',
+    index=17,
+    containing_service=None,
+    input_type=_EMPTY,
+    output_type=_MRFLIST,
+    options=_descriptor._ParseOptions(descriptor_pb2.MethodOptions(), _b('\202\323\344\223\002\023\022\021/api/v1/longtails')),
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_GOOGLEMRF)
+
+DESCRIPTOR.services_by_name['GoogleMRF'] = _GOOGLEMRF
+
 try:
   # THESE ELEMENTS WILL BE DEPRECATED.
   # Please use the generated *_pb2_grpc.py files instead.
   import grpc
-  from grpc.framework.common import cardinality
-  from grpc.framework.interfaces.face import utilities as face_utilities
   from grpc.beta import implementations as beta_implementations
   from grpc.beta import interfaces as beta_interfaces
+  from grpc.framework.common import cardinality
+  from grpc.framework.interfaces.face import utilities as face_utilities
 
 
   class GoogleMRFStub(object):
@@ -606,36 +790,50 @@ try:
       raise NotImplementedError('Method not implemented!')
 
     def ValidateAgency(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateChannel(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateLOB(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateMedia(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateProduct(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateSubMedia(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
     def ValidateSubProduct(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
@@ -806,18 +1004,32 @@ try:
       """
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateAgency(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateChannel(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateLOB(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateMedia(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateProduct(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateSubMedia(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def ValidateSubProduct(self, request, context):
+      # missing associated documentation comment in .proto file
+      pass
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def LongTailMRFs(self, request, context):
       """All 'long tail' mrfs.
@@ -887,24 +1099,38 @@ try:
       raise NotImplementedError()
     ValidateMRF.future = None
     def ValidateAgency(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateAgency.future = None
     def ValidateChannel(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateChannel.future = None
     def ValidateLOB(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateLOB.future = None
     def ValidateMedia(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateMedia.future = None
     def ValidateProduct(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateProduct.future = None
     def ValidateSubMedia(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateSubMedia.future = None
     def ValidateSubProduct(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      # missing associated documentation comment in .proto file
+      pass
       raise NotImplementedError()
     ValidateSubProduct.future = None
     def LongTailMRFs(self, request, timeout, metadata=None, with_call=False, protocol_options=None):

@@ -124,6 +124,7 @@ message MRF {
     google.protobuf.Timestamp InitialApprovalDate = 16;
     string HelpText = 17;
     string IndicatedStatus = 18;
+    string MMG = 19;
 }
 
 // A list of MRFs.
